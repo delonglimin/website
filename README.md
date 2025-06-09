@@ -1,0 +1,65 @@
+---
+title: 聊软信息科技 - 聊城专业软件服务提供商 | 软件开发 / APP 开发 / 网站建设 / 小程序 / 数字大屏 / 软件外包 / OA 系统
+description: 聊软信息科技，专注聊城本地的高端软件服务提供商。提供软件开发、APP 定制、网站建设、小程序开发、数字大屏可视化、软件外包服务，涵盖 OA 办公系统、ERP 系统、电商平台搭建、微信公众号开发、人工智能应用（数据标注 / 地图标注）等。助力企业数字化转型，提供从系统集成、信息建设到服务运维的全流程解决方案
+meta:
+  - name: keywords
+    content: 聊城软件开发，APP 开发公司，网站建设服务商，小程序开发，数字大屏，软件外包，OA 系统定制，企业数字化转型，ERP 系统开发，人工智能应用
+home: true
+modules:
+  - BannerBrand
+  - Features
+  - Blog
+  - MdContent
+  - Footer
+bannerBrand:
+  bgImage: '/bg.svg'
+  title: 一站式软件服务商
+  description: 专业、创新、高效、诚信。
+  tagline: 以客户需求为导向，以技术创新为动力。不仅提供软件产品，更致力于成为企业数字化转型的可靠伙伴，通过专业的技术服务，帮助企业提升竞争力，实现可持续发展。​无论您是需要开发一款全新的应用系统，还是希望对现有系统进行升级改造，亦或是寻求数字化转型的整体解决方案，聊软信息科技都将为您提供专业的咨询与服务
+  buttons:
+    - { text: Guide, link: '/docs/guide/introduce' }
+    - { text: Default Style, link: '/docs/style-default-api/introduce', type: 'plain' }
+  socialLinks:
+    - { icon: 'LogoGithub', link: 'https://github.com/vuepress-reco/vuepress-theme-reco' }
+
+features:
+  - { title: 专业的技术团队，提供全方位的技术支持。 }
+  - { title: 创新的技术解决方案，满足不同企业的需求。 }
+  - { title: 高效的团队协作，确保项目按时完成。 }
+  - { title: 诚信的服务态度，为客户提供高质量的服务。 }
+blog:
+  socialLinks:
+    - { icon: 'LogoGithub', link: 'https://github.com/recoluan' }
+footer:
+  record: 鲁ICP备2024113057号
+  recordLink: https://beian.miit.gov.cn/#/Integrated/index
+isShowTitleInHome: true
+actionText: About
+actionLink: /views/other/about
+
+---
+
+## 快速开始
+
+**npx**
+
+```bash
+# 初始化，并选择 2.x
+npx @vuepress-reco/theme-cli init
+```
+
+**npm**
+
+```bash
+# 初始化，并选择 2.x
+npm install @vuepress-reco/theme-cli@1.0.7 -g
+theme-cli init
+```
+
+**yarn**
+
+```bash
+# 初始化，并选择 2.x
+yarn global add @vuepress-reco/theme-cli@1.0.7
+theme-cli init
+```

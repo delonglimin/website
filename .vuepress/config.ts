@@ -1,0 +1,94 @@
+import { defineUserConfig } from "vuepress";
+import recoTheme from "vuepress-theme-reco";
+import { viteBundler } from '@vuepress/bundler-vite'
+import { webpackBundler } from '@vuepress/bundler-webpack'
+
+export default defineUserConfig({
+  title: "聊软",
+  description: "聊软信息科技，专注聊城本地的高端软件服务提供商。提供软件开发、APP 定制、网站建设、小程序开发、数字大屏可视化、软件外包服务，涵盖 OA 办公系统、ERP 系统、电商平台搭建、微信公众号开发、人工智能应用（数据标注 / 地图标注）等。助力企业数字化转型，提供从系统集成、信息建设到服务运维的全流程解决方案",
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "/logo.png",
+      },
+    ],
+  ],
+  bundler: webpackBundler(),
+  theme: recoTheme({
+    logo: "/logo.png",
+    author: "许得龙",
+    authorAvatar: "/head.png",
+    // docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
+    // docsBranch: "main",
+    docsDir: "./",
+    lastUpdatedText: "",
+    editLink: false,
+    // series 为原 sidebar
+    series: {
+      "/docs/theme-reco/": [
+        {
+          text: "module one",
+          children: ["home", "theme"],
+        },
+        {
+          text: "module two",
+          children: ["api", "plugin"],
+        },
+      ],
+    },
+    navbar: [
+      { text: "首页", link: "/" },
+      { text: "资讯", link: "/categories/reco/1.html" },
+      { text: "分类", link: "/categories/reco/1.html" },
+      { text: "标签", link: "/tags/tag1/1.html" },
+      { text: "企业数字化", link: "/tags/tag1/1.html" },
+      {
+        text: "服务",
+        children: [
+          { text: "软件业务", link: "/docs/theme-reco/theme" },
+          { text: "网站业务", link: "/blogs/other/guide" },
+          { text: "系统集成", link: "/blogs/other/guide" },
+          { text: "信息咨询", link: "/blogs/other/guide" },
+          { text: "其他服务", link: "/blogs/other/guide" },
+        ],
+      },
+      {
+        text: "产品",
+        children: [
+          { text: "商城系统", link: "/docs/theme-reco/theme" },
+          { text: "数字大屏", link: "/blogs/other/guide" },
+          { text: "物业系统", link: "/blogs/other/guide" },
+          { text: "疗养中心", link: "/blogs/other/guide" },
+          { text: "影视系统", link: "/blogs/other/guide" },
+          { text: "生产管理MES", link: "/blogs/other/guide" },
+          { text: "数字孪生", link: "/blogs/other/guide" },
+        ],
+      },
+
+      { text: '案例', link: '/docs/others/examples', icon: 'IconFire' },
+      { text: '留言板', link: '/docs/others/message-board', icon: 'IconChat' },
+    ],
+    
+    commentConfig: {
+      type: 'valine',
+      // options 与 1.x 的 valineConfig 配置一致
+      options: {
+        appId: 'pi7btdKAt76lDTqqaLVms2yg-gzGzoHsz',
+        appKey: 'AiA4zb3rwYFV84137yHVwPjY',
+        // placeholder: '填写邮箱可以收到回复提醒哦！',
+        // verify: true, // 验证码服务
+        // notify: true,
+        // recordIP: true,
+        hideComments: true // 隐藏评论
+      },
+    },
+    algolia: {
+      appId: 'WQOJVVEXIY',
+      apiKey: 'c0ea83e6919d693517c3bb63aa369927',
+      indexName: 'www_xudelong_top_wqojvvexiy_pages',
+    }
+  }),
+  debug: true,
+});
