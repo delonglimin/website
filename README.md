@@ -17,16 +17,15 @@ bannerBrand:
   description: 专业、创新、高效、诚信。
   tagline: 以客户需求为导向，以技术创新为动力。不仅提供软件产品，更致力于成为企业数字化转型的可靠伙伴，通过专业的技术服务，帮助企业提升竞争力，实现可持续发展。​无论您是需要开发一款全新的应用系统，还是希望对现有系统进行升级改造，亦或是寻求数字化转型的整体解决方案，聊软信息科技都将为您提供专业的咨询与服务
   buttons:
-    - { text: Guide, link: '/docs/guide/introduce' }
-    - { text: Default Style, link: '/docs/style-default-api/introduce', type: 'plain' }
+    - { text: 免费咨询, link: '/docs/guide/introduce' }
+    # - { text: Default Style, link: '/docs/style-default-api/introduce', type: 'plain' }
   socialLinks:
     - { icon: 'LogoGithub', link: 'https://github.com/vuepress-reco/vuepress-theme-reco' }
 
 features:
-  - { title: 专业的技术团队，提供全方位的技术支持。 }
-  - { title: 创新的技术解决方案，满足不同企业的需求。 }
-  - { title: 高效的团队协作，确保项目按时完成。 }
-  - { title: 诚信的服务态度，为客户提供高质量的服务。 }
+  - { title: 服务, details: 全程一对一跟进，确保每个环节贴合企业实际需求 }
+  - { title: 专业, details: 团队来自国内一线互联网公司百度、360等，10余年互联网软件经验}
+  - { title: 产品, details: 提供一站式解决方案，让企业无需为技术问题有后顾之忧 }
 blog:
   socialLinks:
     - { icon: 'LogoGithub', link: 'https://github.com/recoluan' }
@@ -39,27 +38,6 @@ actionLink: /views/other/about
 
 ---
 
-## 快速开始
+## 客户评价
 
-**npx**
-
-```bash
-# 初始化，并选择 2.x
-npx @vuepress-reco/theme-cli init
-```
-
-**npm**
-
-```bash
-# 初始化，并选择 2.x
-npm install @vuepress-reco/theme-cli@1.0.7 -g
-theme-cli init
-```
-
-**yarn**
-
-```bash
-# 初始化，并选择 2.x
-yarn global add @vuepress-reco/theme-cli@1.0.7
-theme-cli init
-```
+<ClientReviews />

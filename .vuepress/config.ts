@@ -20,6 +20,8 @@ export default defineUserConfig({
     logo: "/logo.png",
     author: "许得龙",
     authorAvatar: "/head.png",
+    colorMode: 'dark', // dark, light, 默认 auto
+    colorModeSwitch: false, // 是否展示颜色模式开关，默认 true
     // docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
     // docsBranch: "main",
     docsDir: "./",
