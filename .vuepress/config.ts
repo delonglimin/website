@@ -15,13 +15,13 @@ export default defineUserConfig({
       },
     ],
   ],
-  bundler: webpackBundler(),
+  bundler: viteBundler(),
   theme: recoTheme({
     logo: "/logo.png",
     author: "许得龙",
     authorAvatar: "/head.png",
-    colorMode: 'dark', // dark, light, 默认 auto
-    colorModeSwitch: false, // 是否展示颜色模式开关，默认 true
+    // colorMode: 'dark', // dark, light, 默认 auto
+    // colorModeSwitch: true, // 是否展示颜色模式开关，默认 true
     // docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
     // docsBranch: "main",
     docsDir: "./",
@@ -42,37 +42,42 @@ export default defineUserConfig({
     },
     navbar: [
       { text: "首页", link: "/" },
-      { text: "资讯", link: "/categories/reco/1.html" },
-      { text: "分类", link: "/categories/reco/1.html" },
-      { text: "标签", link: "/tags/tag1/1.html" },
-      { text: "企业数字化", link: "/tags/tag1/1.html" },
+      { text: "企业数字化", link: "/docs/service/enterprisedigital.html" },
       {
         text: "服务",
         children: [
-          { text: "软件业务", link: "/docs/theme-reco/theme" },
-          { text: "网站业务", link: "/blogs/other/guide" },
-          { text: "系统集成", link: "/blogs/other/guide" },
-          { text: "信息咨询", link: "/blogs/other/guide" },
-          { text: "其他服务", link: "/blogs/other/guide" },
+          { text: "软件业务", link: "/docs/service/software.html" },
+          { text: "网站业务", link: "/docs/service/website.html" },
+          { text: "系统集成", link: "/docs/service/system.html" },
+          { text: "信息咨询", link: "/docs/service/information.html" },
+          { text: "其他服务", link: "/docs/service/other.html" },
         ],
       },
       {
         text: "产品",
         children: [
-          { text: "商城系统", link: "/docs/theme-reco/theme" },
-          { text: "数字大屏", link: "/blogs/other/guide" },
-          { text: "物业系统", link: "/blogs/other/guide" },
-          { text: "疗养中心", link: "/blogs/other/guide" },
-          { text: "影视系统", link: "/blogs/other/guide" },
-          { text: "生产管理MES", link: "/blogs/other/guide" },
-          { text: "数字孪生", link: "/blogs/other/guide" },
+          { text: "商城系统", link: "/blogs/product/shop.html" },
+          { text: "数字大屏", link: "/blogs/product/bigscreen.html" },
+          { text: "物业系统", link: "/blogs/product/wuye.html" },
+          { text: "疗养中心", link: "/blogs/product/liaoyang.html" },
+          { text: "影视系统", link: "/blogs/product/yingshi.html" },
+          { text: "生产管理MES", link: "/blogs/product/mes.html" },
+          { text: "数字孪生", link: "/blogs/product/luansheng.html" },
         ],
       },
-
+      { text: "资讯", link: "/categories/reco/1.html" },
       { text: '案例', link: '/docs/others/examples', icon: 'IconFire' },
       { text: '留言板', link: '/docs/others/message-board', icon: 'IconChat' },
+      {
+        text: "关于",
+        children: [
+          { text: "关于聊软", link: "/docs/others/aboutcompany.html" },
+          { text: "关于我", link: "/docs/others/aboutme.html" },
+          { text: "关于你", link: "/series/aboutyou/dif.html" },
+        ],
+      },
     ],
-    
+    autoSetSeries: true,
     commentConfig: {
       type: 'valine',
       // options 与 1.x 的 valineConfig 配置一致
