@@ -22,49 +22,40 @@
 <script setup>
 import { ref } from 'vue';
 
-const catagoryName = ref('其他服务');
+const catagoryName = ref('软件业务');
 // 服务数据
 const services = ref([
   {
-    title: '地图标注',
-    description: '百度、高德、腾讯三大地图厂商标注服务',
-    icon: '/1.svg'
+    title: 'app开发',
+    description: 'app定制，app开发，支持uniapp，flutter 原生3种技术方案',
+    icon: '/3.svg'
   },
   {
-    title: '网络推广',
-    description: '提供网络营销，推广服务，让客户来找您',
-    icon: '/1.svg'
+    title: '小程序开发',
+    description: '小程序开发，微信小程序，抖音小程序，支持跨端多平台方案',
+    icon: '/3.svg'
   },
   {
-    title: '软件服务',
-    description: '资源下载，电脑手机一系列和软件相关的问题',
-    icon: '/1.svg'
+    title: '系统开发',
+    description: '教育、视频、娱乐需求发布等各种系统，软件，工具定制，二次开发，从零开发',
+    icon: '/3.svg'
   },
   {
-    title: '网店咨询',
-    description: '国内以及境外电商网店开通服务咨询',
-    icon: '/1.svg'
+    title: '系统运维',
+    description: '系统、服务器代运维',
+    icon: '/3.svg'
   },
   {
-    title: 'chatgpt',
-    description: '提供chatgpt接入服务，让工作效率快到飞起',
-    icon: '/1.svg'
+    title: '系统集成',
+    description: 'OA系统、ERP系统、CRM等系统集成',
+    icon: '/3.svg'
   },
   {
-    title: '软件工具',
-    description: '音乐下载，视频下载，去水印，音频合成，数字人等一系列提效工具',
-    icon: '/1.svg'
-  },
-  {
-    title: '数据分析',
-    description: '专业的数据统计和分析服务，提供决策支持',
-    icon: '/1.svg'
-  },
-  {
-    title: '技术咨询',
-    description: '提供专业的IT技术咨询和解决方案',
-    icon: '/1.svg'
+    title: '系统对接',
+    description: '浪潮、金蝶、用友等各大厂商系统对接',
+    icon: '/3.svg'
   }
+  
 ]);
 </script>
 

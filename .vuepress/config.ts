@@ -48,9 +48,8 @@ export default defineUserConfig({
         children: [
           { text: "软件业务", link: "/docs/service/software.html" },
           { text: "网站业务", link: "/docs/service/website.html" },
-          { text: "系统集成", link: "/docs/service/system.html" },
           { text: "信息咨询", link: "/docs/service/information.html" },
-          { text: "其他服务", link: "/docs/service/other.html" },
+          { text: "人工智能", link: "/docs/service/other.html" },
         ],
       },
       {
@@ -65,7 +64,7 @@ export default defineUserConfig({
           { text: "数字孪生", link: "/blogs/product/luansheng.html" },
         ],
       },
-      { text: "资讯", link: "/categories/reco/1.html" },
+      { text: "资讯", link: "/categories/xinwen/1.html" },
       { text: '案例', link: '/docs/others/examples', icon: 'IconFire' },
       { text: '留言板', link: '/docs/others/message-board', icon: 'IconChat' },
       {

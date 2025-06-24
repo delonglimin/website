@@ -22,49 +22,24 @@
 <script setup>
 import { ref } from 'vue';
 
-const catagoryName = ref('其他服务');
+const catagoryName = ref('网站业务');
 // 服务数据
 const services = ref([
   {
-    title: '地图标注',
-    description: '百度、高德、腾讯三大地图厂商标注服务',
+    title: '网站开发',
+    description: '企业网站建设，形象建设',
     icon: '/1.svg'
   },
   {
-    title: '网络推广',
-    description: '提供网络营销，推广服务，让客户来找您',
+    title: '网站维护',
+    description: '服务器、网站代维护',
     icon: '/1.svg'
   },
   {
-    title: '软件服务',
-    description: '资源下载，电脑手机一系列和软件相关的问题',
+    title: '网站优化',
+    description: 'seo.咨询，网站排名、体验、速度优化',
     icon: '/1.svg'
   },
-  {
-    title: '网店咨询',
-    description: '国内以及境外电商网店开通服务咨询',
-    icon: '/1.svg'
-  },
-  {
-    title: 'chatgpt',
-    description: '提供chatgpt接入服务，让工作效率快到飞起',
-    icon: '/1.svg'
-  },
-  {
-    title: '软件工具',
-    description: '音乐下载，视频下载，去水印，音频合成，数字人等一系列提效工具',
-    icon: '/1.svg'
-  },
-  {
-    title: '数据分析',
-    description: '专业的数据统计和分析服务，提供决策支持',
-    icon: '/1.svg'
-  },
-  {
-    title: '技术咨询',
-    description: '提供专业的IT技术咨询和解决方案',
-    icon: '/1.svg'
-  }
 ]);
 </script>
 

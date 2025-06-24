@@ -22,48 +22,38 @@
 <script setup>
 import { ref } from 'vue';
 
-const catagoryName = ref('其他服务');
+const catagoryName = ref('人工智能AI');
 // 服务数据
 const services = ref([
   {
-    title: '地图标注',
-    description: '百度、高德、腾讯三大地图厂商标注服务',
-    icon: '/1.svg'
+    title: 'RAG（检索增强生成）',
+    description: '智能客服、知识问答、内容创作等场景',
+    icon: '/2.svg'
   },
   {
-    title: '网络推广',
-    description: '提供网络营销，推广服务，让客户来找您',
-    icon: '/1.svg'
+    title: 'MCP',
+    description: '结合自身业务，让AI更智能',
+    icon: '/2.svg'
   },
   {
-    title: '软件服务',
-    description: '资源下载，电脑手机一系列和软件相关的问题',
-    icon: '/1.svg'
+    title: '模型微调',
+    description: '基于通用预训练大模型，进行企业针对性优化',
+    icon: '/2.svg'
   },
   {
-    title: '网店咨询',
-    description: '国内以及境外电商网店开通服务咨询',
-    icon: '/1.svg'
+    title: 'AI 应用、智能体开发',
+    description: '更专注的AI助手',
+    icon: '/2.svg'
   },
   {
-    title: 'chatgpt',
-    description: '提供chatgpt接入服务，让工作效率快到飞起',
-    icon: '/1.svg'
+    title: '企业培训',
+    description: '为企业提供市面上主流AI工具的培训服务',
+    icon: '/2.svg'
   },
   {
-    title: '软件工具',
-    description: '音乐下载，视频下载，去水印，音频合成，数字人等一系列提效工具',
-    icon: '/1.svg'
-  },
-  {
-    title: '数据分析',
-    description: '专业的数据统计和分析服务，提供决策支持',
-    icon: '/1.svg'
-  },
-  {
-    title: '技术咨询',
-    description: '提供专业的IT技术咨询和解决方案',
-    icon: '/1.svg'
+    title: 'AI自动化',
+    description: '结合RPA技术，自动化模拟人类真实操作',
+    icon: '/2.svg'
   }
 ]);
 </script>
