@@ -2,6 +2,8 @@ import { defineUserConfig } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
+import { photoSwipePlugin } from '@vuepress/plugin-photo-swipe'
+
 
 export default defineUserConfig({
   title: "聊软",
@@ -55,13 +57,13 @@ export default defineUserConfig({
       {
         text: "产品",
         children: [
-          { text: "商城系统", link: "/blogs/product/shop.html" },
-          { text: "数字大屏", link: "/blogs/product/bigscreen.html" },
-          { text: "物业系统", link: "/blogs/product/wuye.html" },
-          { text: "疗养中心", link: "/blogs/product/liaoyang.html" },
-          { text: "影视系统", link: "/blogs/product/yingshi.html" },
-          { text: "生产管理MES", link: "/blogs/product/mes.html" },
-          { text: "数字孪生", link: "/blogs/product/luansheng.html" },
+          { text: "商城系统", link: "/docs/product/shop.html" },
+          { text: "数字大屏", link: "/docs/product/bigscreen.html" },
+          { text: "物业系统", link: "/docs/product/wuye.html" },
+          { text: "疗养中心", link: "/docs/product/liaoyang.html" },
+          { text: "影视系统", link: "/docs/product/yingshi.html" },
+          { text: "生产管理MES", link: "/docs/product/mes.html" },
+          { text: "数字孪生", link: "/docs/product/luansheng.html" },
         ],
       },
       { text: "资讯", link: "/categories/xinwen/1.html" },
@@ -97,4 +99,9 @@ export default defineUserConfig({
     }
   }),
   debug: true,
+  plugins: [
+    photoSwipePlugin({
+      selector: '.page-container  img', // 选择器，默认是 .theme-reco-content img
+    }),
+  ],
 });

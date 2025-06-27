@@ -1,6 +1,26 @@
 ---
-title: 案例
+title: 智慧大屏监控(仅做演示)
 isShowComments: false
 ---
 
-<services-information />
+通用可视化示意图：
+<img src="/pic/prod/1.png" width="80%" style="margin:auto" />
+智慧设备监控示意图：
+<img src="/pic/prod/2.png" width="80%" style="margin:auto" />
+矛盾纠纷管理示意图：
+<img src="/pic/prod/3.png" width="80%" style="margin:auto" />
+
+
+
+
+## 视觉冲击力强
+数据大屏利用大尺寸萤幕和艺术化的可视化图表,产生非常强烈的视觉冲击力,一目了然地呈现关键信息
+
+## 动态实时呈现
+大屏能够展示动态变化的实时数据,将海量数据变成生动的视觉呈现,实现真实、立体的展示效果
+
+## 政企量身定制
+ 融合政企特色，突出重点关注，场景式模板，提供一站式符合政企场景需求服务
+
+## 政企数字大屏
+政府数字大屏可以全面提升政务管理、信息发布、社会治理的现代智能化水平，从而发展成为智慧城市

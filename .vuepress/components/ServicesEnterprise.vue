@@ -74,6 +74,11 @@ const services = ref([
     title: '传感器采集',
     description: '自持各类传感器的数据采集，温湿度，噪音，压力，气体，红外线，电磁波，光电等支持标准工业传输协议modbus的所有设备以及标准智能电表协议数据采集',
     icon: '/5.svg'
+  },
+  {
+    title: '工业物联网',
+    description: '工业物联网平台，scanda hmi组态，各种工业协议对接modbus-tcp，rtu，opc-ua，mqtt、lora ，zigbee、蓝牙、4G、wifi等等',
+    icon: '/5.svg'
   }
 ]);
 </script>

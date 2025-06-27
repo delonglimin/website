@@ -10,14 +10,13 @@ modules:
   - Features
   - Blog
   - MdContent
-  - Footer
 bannerBrand:
   bgImage: '/bg.svg'
   title: 一站式软件服务商
   description: 专业、创新、高效、诚信。
   tagline: 以客户需求为导向，以技术创新为动力。不仅提供软件产品，更致力于成为企业数字化转型的可靠伙伴，通过专业的技术服务，帮助企业提升竞争力，实现可持续发展。​无论您是需要开发一款全新的应用系统，还是希望对现有系统进行升级改造，亦或是寻求数字化转型的整体解决方案，聊软信息科技都将为您提供专业的咨询与服务
   buttons:
-    - { text: 免费咨询, link: '/docs/guide/introduce' }
+    - { text: 免费咨询, link: '/docs/others/aboutcompany.html#快速联系' }
     # - { text: Default Style, link: '/docs/style-default-api/introduce', type: 'plain' }
   socialLinks:
     - { icon: 'LogoGithub', link: 'https://github.com/vuepress-reco/vuepress-theme-reco' }

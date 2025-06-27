@@ -12,32 +12,55 @@
       >
         <span
           class="btn--go"
-          @click="jumpLink(item.link)"
+          @click="jumpLink(item,index)"
         >Go</span>
       </div>
     </div>
   </div>
 
-  <Pagation
+  <!-- <Pagation
     :currentPage="currentPage"
     :total="examplesData.length"
     @change="handlePagation"
-  />
+  /> -->
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted ,onUnmounted} from 'vue';
 import examplesData from '../data/examples';
 import Pagation from 'vuepress-theme-reco/lib/client/components/Pagation.vue';
-
-const jumpLink = (link?: string) => {
-  if (link) {
-    window.open(link, '_blank')
+import { createPhotoSwipe } from '@vuepress/plugin-photo-swipe/client'
+const jumpLink = (item?: any,index?: number) => {
+  if (item.link && item.link !== '/') {
+    window.open(item.link, '_blank')
+  }else{
+    openPhotoSwipe(index || 1)
   }
 }
 
+let state:any = null
+
+const openPhotoSwipe = (index: number): void => {
+  state?.open(index)
+}
+onMounted(async () => {
+  // 通过图片链接创建一个新的 PhotoSwipe 实例
+  const imgs = examplesData.map((item: any) => {
+    return item.thumbnail
+  })
+  state = await createPhotoSwipe(
+    imgs,
+    {
+      // PhotoSwipe 选项
+    },
+  )
+})
+
+onUnmounted(() => {
+  state?.destroy()
+})
 const currentPage = ref(1)
-const perPage = 9
+const perPage = 13
 const examplesOfCurrentPage = computed(() => {
   const start = (currentPage.value - 1) * perPage
   const end = currentPage.value * perPage
@@ -64,15 +87,19 @@ if (!__VUEPRESS_SSR__) {
 @import '@vuepress-reco/tailwindcss-config/lib/client/styles/tailwindcss-base.css';
 
 .examples__container {
-  @apply flex flex-wrap;
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+ 
+  @apply relative;
+  @apply overflow-hidden;
   .examples__item {
-    @apply relative w-full h-48 my-4 border-block overflow-hidden bg-cover bg-center;
+    @apply relative w-full h-48 border-block overflow-hidden bg-cover bg-center;
     @apply hover:border-0 hover:border-primary hover:shadow-2xl hover:shadow-reco-primary;
     transition: box-shadow 0.4s;
-    @apply md:w-72 md:h-40;
+    @apply md:h-40;
     &:nth-child(3n+2) {
-      @apply mx-0;
-      @apply md:mx-8;
+      
+      /* @apply mx-0;
+      @apply md:mx-8; */
     }
     &:hover {
       .examples__item__btn {
