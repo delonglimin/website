@@ -3,7 +3,7 @@ import recoTheme from "vuepress-theme-reco";
 import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 import { photoSwipePlugin } from '@vuepress/plugin-photo-swipe'
-
+import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 
 export default defineUserConfig({
   title: "聊软",
@@ -17,8 +17,14 @@ export default defineUserConfig({
       },
     ],
   ],
-  bundler: viteBundler(),
+  bundler: webpackBundler(),
   theme: recoTheme({
+    friendshipLinks: [
+    {
+      title: "码力全开",
+      link: "https://www.maliquankai.com/",
+      logo: "/logo.png",
+    }],
     logo: "/logo.png",
     author: "许得龙",
     authorAvatar: "/head.png",
@@ -103,5 +109,8 @@ export default defineUserConfig({
     photoSwipePlugin({
       selector: '.page-container  img', // 选择器，默认是 .theme-reco-content img
     }),
+    baiduAnalyticsPlugin({
+      id:"c53af42ac47f387100e65acedcaefed0"
+    })
   ],
 });

@@ -10,6 +10,7 @@ modules:
   - Features
   - Blog
   - MdContent
+  - Footer
 bannerBrand:
   bgImage: '/bg.svg'
   title: 一站式软件服务商
