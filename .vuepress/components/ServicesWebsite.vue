@@ -1,9 +1,9 @@
 <template>
   <div class="container mx-auto px-4 py-12">
-    <div class="text-3xl md:text-4xl font-bold text-center mb-8 ">{{catagoryName}}</div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div 
-        class="border-block bg-block magic-card rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 p-6"
+    <!-- <div class="text-3xl md:text-4xl font-bold text-center mb-8 ">{{catagoryName}}</div> -->
+    <div class="features__container">
+      <MagicCard 
+        class="features__item"
         v-for="(item, index) in services" 
         :key="index"
       >
@@ -14,13 +14,14 @@
         </div>
         <h3 class="text-xl font-semibold mb-3 text-center">{{ item.title }}</h3>
         <p class="text-center leading-relaxed">{{ item.description }}</p>
-      </div>
+      </MagicCard>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref ,onMounted} from 'vue';
+import { useMagicCard } from "vuepress-theme-reco/lib/client/composables/index.js";
 
 const catagoryName = ref('网站业务');
 // 服务数据
@@ -41,9 +42,28 @@ const services = ref([
     icon: '/1.svg'
   },
 ]);
+onMounted(() => {
+  // 初始化MagicCard效果
+  const { initMagicCard } = useMagicCard();
+  initMagicCard();
+});
 </script>
 
 <style scoped>
 /* 可选：添加自定义样式或覆盖Tailwind默认值 */
+@import "@vuepress-reco/tailwindcss-config/lib/client/styles/tailwindcss-base.css";
+.features__container {
+  @apply grid grid-cols-1 gap-4 max-w-screen-xl mx-auto my-16 px-6;
+  @apply md:grid-cols-3;
+  .features__item {
+    @apply py-4 px-6 cursor-pointer;
+    h4 {
+      @apply mt-0 mb-0 pt-0;
+    }
+    p {
+      @apply my-4 text-lighter;
+    }
+  }
+}
 </style>
     

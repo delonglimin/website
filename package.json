@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vuepress dev .",
     "start": "vuepress dev .",
-    "build": "vuepress build ."
+    "build": "vuepress build . && cd .vuepress/dist/citys && python3 g.py"
   },
   "dependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.19",
@@ -19,6 +19,8 @@
     "vuepress-theme-reco": "^2.0.0-rc.26"
   },
   "devDependencies": {
-    "@vuepress/plugin-baidu-analytics": "^2.0.0-rc.74"
+    "@vuepress/plugin-baidu-analytics": "^2.0.0-rc.74",
+    "@vuepress/plugin-seo": "^2.0.0-rc.74",
+    "@vuepress/plugin-sitemap": "^2.0.0-rc.74"
   }
 }
